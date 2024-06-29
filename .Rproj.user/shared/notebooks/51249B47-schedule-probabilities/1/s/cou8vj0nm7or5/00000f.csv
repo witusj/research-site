@@ -1,0 +1,25 @@
+"0","T = 24 # number of intervals"
+"0","x = np.zeros(T) "
+"0","t = np.arange(T, step=2)"
+"0","x[t] = 1"
+"0","x[-1] = 1"
+"0","x[0] = 2 "
+"0","x = x.astype(int) # initial schedule"
+"0","print(f'Initial schedule: {x}')"
+"1","Initial schedule: [2 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1]
+"
+"0","N = np.sum(x)"
+"0","d = 10"
+"0","l = 20"
+"0","limit = calc_distr_limit(l * N)+1"
+"0","service_times = range(0, limit)"
+"0","s = np.array([poisson.pmf(i, l) for i in service_times], dtype=np.float64)"
+"0","u = T-1"
+"0","sch = run_schedule(x, d, s, u, False)"
+"1","Expected wt per state: [20.          0.         20.0003139   0.         20.00654104  0.
+ 20.02974938  0.         20.07680883  0.         20.14909919  0.
+ 20.24496897  0.         20.36160607  0.         20.49598958  0.
+ 20.64529634  0.         20.8070411   0.         20.97909812 30.97970595]
+"
+"0","sch.visualize_system('p_plus')"
+"0",""

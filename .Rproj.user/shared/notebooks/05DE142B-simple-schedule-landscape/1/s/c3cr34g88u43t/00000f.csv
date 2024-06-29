@@ -1,0 +1,14 @@
+"0","""""""Simple test case"""""""
+"1","'Simple test case'
+"
+"0","d = 3"
+"0","q = 0.0"
+"0","omega = 0.6"
+"0","s=np.array("
+"0","    [0.1, 0.2, 0.3, 0.2, 0.15, 0.05, 0, 0, 0, 0, 0, 0, 0, 0], dtype=np.float64)"
+"0","# s= service_time_with_no_shows(s, q)"
+"0","indices = np.arange(s.size)"
+"0","exp_s = (indices * s).sum()"
+"0","print(f'exp_s = {exp_s}')"
+"1","exp_s = 2.25
+"

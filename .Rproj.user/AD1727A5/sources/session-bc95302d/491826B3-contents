@@ -1,0 +1,6 @@
+/.quarto/
+/.virtualenv/
+/.luarc.json
+.virtualenv/
+logs.txt
+*.logs

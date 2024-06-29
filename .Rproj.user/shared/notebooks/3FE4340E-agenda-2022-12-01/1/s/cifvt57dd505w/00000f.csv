@@ -1,0 +1,9 @@
+"0","import numpy as np"
+"0","from matplotlib import pyplot as plt"
+"0","ats = np.array([0, 0, 10, 25, 35, 35])"
+"0","iats = np.diff(ats)"
+"0","iats_d = np.diff(iats)"
+"0",""
+"0","f""ats = {ats}, iats = {iats}, iats_d={iats_d}"""
+"1","'ats = [ 0  0 10 25 35 35], iats = [ 0 10 15 10  0], iats_d=[ 10   5  -5 -10]'
+"

@@ -1,0 +1,20 @@
+"0","import numpy as np"
+"0",""
+"0","# Create a mask for rows with negative values"
+"0","mask = ~np.any(y < 0, axis=1)"
+"0",""
+"0","# Filter out rows with negative values using the mask"
+"0","filtered_y = y[mask]"
+"0",""
+"0","filtered_y"
+"1","array([[2., 0., 0., 0., 2.],
+       [1., 0., 0., 0., 3.],
+       [2., 0., 0., 1., 1.],
+       [1., 0., 0., 1., 2.],
+       [2., 0., 1., 0., 1.],
+       [1., 0., 1., 0., 2.],
+       [2., 1., 0., 0., 1.],
+       [1., 1., 0., 0., 2.],
+       [3., 0., 0., 0., 1.],
+       [2., 0., 0., 0., 2.]])
+"

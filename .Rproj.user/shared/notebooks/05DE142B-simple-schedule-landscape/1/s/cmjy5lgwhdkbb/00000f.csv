@@ -1,0 +1,5 @@
+"0",""
+"0","schedule = find_optimal_schedule(x, d, s, q, omega, print_system=False)"
+"0","print(schedule.parameters['x'])"
+"1","[6 0 0]
+"

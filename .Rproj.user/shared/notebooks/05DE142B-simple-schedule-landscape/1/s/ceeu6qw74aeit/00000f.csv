@@ -1,0 +1,10 @@
+"0","print(x)"
+"1","[6 0 0]
+"
+"0","schedule = find_optimal_schedule(x, d, s, q, omega, print_system=False)"
+"0","print(schedule.parameters['x'])"
+"1","[2 1 3]
+"
+"0","print(schedule.system['search_path'])"
+"1","[{'schedule': array([6, 0, 0]), 'loss': 5.2199619}, {'schedule': array([6, 0, 0]), 'loss': 5.2199619}, {'schedule': array([5, 0, 1]), 'loss': 4.625650500000001}, {'schedule': array([5, 0, 1]), 'loss': 4.625650500000001}, {'schedule': array([4, 0, 2]), 'loss': 4.088095000000001}, {'schedule': array([4, 0, 2]), 'loss': 4.088095000000001}, {'schedule': array([3, 0, 3]), 'loss': 3.7928313000000005}, {'schedule': array([3, 0, 3]), 'loss': 3.7928313000000005}, {'schedule': array([2, 0, 4]), 'loss': 4.160907700000001}, {'schedule': array([3, 1, 2]), 'loss': 3.7949640000000002}, {'schedule': array([2, 1, 3]), 'loss': 3.5362803000000005}, {'schedule': array([2, 1, 3]), 'loss': 3.5362803000000005}, {'schedule': array([1, 1, 4]), 'loss': 4.0687079}, {'schedule': array([3, 0, 3]), 'loss': 3.7928313000000005}, {'schedule': array([2, 2, 2]), 'loss': 3.605387300000001}, {'schedule': array([2, 0, 4]), 'loss': 4.160907700000001}, {'schedule': array([1, 2, 3]), 'loss': 3.803862}, {'schedule': array([3, 1, 2]), 'loss': 3.7949640000000002}, {'schedule': array([2, 1, 3]), 'loss': 3.5362803000000005}]
+"

@@ -1,0 +1,49 @@
+"0","fig = go.Figure(data=[go.Scatter3d("
+"0","    x=x,"
+"0","    y=y,"
+"0","    z=z,"
+"0","    mode='markers',"
+"0","    marker=dict("
+"0","        size=4,"
+"0","        color=f_x,  # Set color to function values"
+"0","        colorscale='Viridis',"
+"0","        opacity=0.8"
+"0","    ),"
+"0","    hoverinfo='text',"
+"0","    text=[f'f_x: {value:.2f}' for value in f_x]  # Display f_x value on hover, formatted to 2 decimal places"
+"0",")])"
+"0",""
+"0","fig.update_layout(title='3D Function Visualization',"
+"0","                  scene=dict("
+"0","                      xaxis_title='X axis',"
+"0","                      yaxis_title='Y axis',"
+"0","                      zaxis_title='Z axis'))"
+"1","Figure({
+    'data': [{'hoverinfo': 'text',
+              'marker': {'color': [9.0, 5.0, 5.0, 9.0],
+                         'colorscale': [[0.0, '#440154'], [0.1111111111111111,
+                                        '#482878'], [0.2222222222222222,
+                                        '#3e4989'], [0.3333333333333333,
+                                        '#31688e'], [0.4444444444444444,
+                                        '#26828e'], [0.5555555555555556,
+                                        '#1f9e89'], [0.6666666666666666,
+                                        '#35b779'], [0.7777777777777778,
+                                        '#6ece58'], [0.8888888888888888,
+                                        '#b5de2b'], [1.0, '#fde725']],
+                         'opacity': 0.8,
+                         'size': 4},
+              'mode': 'markers',
+              'text': [f_x: 9.00, f_x: 5.00, f_x: 5.00, f_x: 9.00],
+              'type': 'scatter3d',
+              'x': [3.0, 2.0, 2.0, 3.0],
+              'y': [0.0, 0.0, 1.0, 0.0],
+              'z': [0.0, 1.0, 0.0, 0.0]}],
+    'layout': {'scene': {'xaxis': {'title': {'text': 'X axis'}},
+                         'yaxis': {'title': {'text': 'Y axis'}},
+                         'zaxis': {'title': {'text': 'Z axis'}}},
+               'template': '...',
+               'title': {'text': '3D Function Visualization'}}
+})
+"
+"0","fig.show()"
+"0",""

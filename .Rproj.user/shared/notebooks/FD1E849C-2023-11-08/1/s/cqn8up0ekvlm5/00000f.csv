@@ -1,0 +1,114 @@
+"0","import plotly.graph_objects as go"
+"0","import numpy as np"
+"0","from itertools import chain, combinations"
+"0",""
+"0","def multimodular_function(x, y, z):"
+"0","    """""""
+"0","    A simple multimodular function for illustration."
+"0","    This function is designed to have multiple local optima but one global optimum."
+"0","    """""""
+"0","    return -1 * (np.sin(x) + np.cos(y) + np.log(z + 1) - x**2/10 - y**2/10 - z**2/10)"
+"0","    "
+"0","# Generate a grid of values in three dimensions"
+"0","x_values = np.linspace(-10, 10, 50)"
+"0","y_values = np.linspace(-10, 10, 50)"
+"0","z_values = np.linspace(0, 20, 50)"
+"0",""
+"0","# Compute the function values"
+"0","function_values = np.zeros((50, 50, 50))"
+"0","for i, x in enumerate(x_values):"
+"0","    for j, y in enumerate(y_values):"
+"0","        for k, z in enumerate(z_values):"
+"0","            function_values[i, j, k] = multimodular_function(x, y, z)"
+"0","            "
+"0","# Find the global optimum"
+"0","max_value = np.max(function_values)"
+"0","optimum_indices = np.where(function_values == max_value)"
+"0","optimum_point = (x_values[optimum_indices[0][0]], y_values[optimum_indices[1][0]], z_values[optimum_indices[2][0]])"
+"0",""
+"0","# Plotting"
+"0","x, y, z = np.meshgrid(x_values, y_values, z_values)"
+"0",""
+"0","fig = go.Figure(data=[go.Scatter3d(x=x.flatten(), y=y.flatten(), z=z.flatten(),"
+"0","                                   mode='markers',"
+"0","                                   marker=dict("
+"0","                                       size=4,"
+"0","                                       color=function_values.flatten(),  # Set color to function values"
+"0","                                       colorscale='Viridis',"
+"0","                                       opacity=0.8"
+"0","                                   ))])"
+"0",""
+"0","# Add marker for the optimum"
+"0","fig.add_trace(go.Scatter3d(x=[optimum_point[0]], y=[optimum_point[1]], z=[optimum_point[2]],"
+"0","                           mode='markers', marker=dict(color='red', size=10)))"
+"1","Figure({
+    'data': [{'marker': {'color': array([20.29505042, 19.96942394, 19.76487325, ..., 55.17955138, 56.74220458,
+                                         58.3385702 ]),
+                         'colorscale': [[0.0, '#440154'], [0.1111111111111111,
+                                        '#482878'], [0.2222222222222222,
+                                        '#3e4989'], [0.3333333333333333,
+                                        '#31688e'], [0.4444444444444444,
+                                        '#26828e'], [0.5555555555555556,
+                                        '#1f9e89'], [0.6666666666666666,
+                                        '#35b779'], [0.7777777777777778,
+                                        '#6ece58'], [0.8888888888888888,
+                                        '#b5de2b'], [1.0, '#fde725']],
+                         'opacity': 0.8,
+                         'size': 4},
+              'mode': 'markers',
+              'type': 'scatter3d',
+              'x': array([-10., -10., -10., ...,  10.,  10.,  10.]),
+              'y': array([-10., -10., -10., ...,  10.,  10.,  10.]),
+              'z': array([ 0.        ,  0.40816327,  0.81632653, ..., 19.18367347, 19.59183673,
+                          20.        ])},
+             {'marker': {'color': 'red', 'size': 10},
+              'mode': 'markers',
+              'type': 'scatter3d',
+              'x': [10.0],
+              'y': [-10.0],
+              'z': [20.0]}],
+    'layout': {'template': '...'}
+})
+"
+"0","fig.update_layout(title='3D Multimodular Function Visualization',"
+"0","                  scene=dict("
+"0","                      xaxis_title='X axis',"
+"0","                      yaxis_title='Y axis',"
+"0","                      zaxis_title='Z axis'),"
+"0","                  margin=dict(r=10, b=10, l=10, t=10))"
+"1","Figure({
+    'data': [{'marker': {'color': array([20.29505042, 19.96942394, 19.76487325, ..., 55.17955138, 56.74220458,
+                                         58.3385702 ]),
+                         'colorscale': [[0.0, '#440154'], [0.1111111111111111,
+                                        '#482878'], [0.2222222222222222,
+                                        '#3e4989'], [0.3333333333333333,
+                                        '#31688e'], [0.4444444444444444,
+                                        '#26828e'], [0.5555555555555556,
+                                        '#1f9e89'], [0.6666666666666666,
+                                        '#35b779'], [0.7777777777777778,
+                                        '#6ece58'], [0.8888888888888888,
+                                        '#b5de2b'], [1.0, '#fde725']],
+                         'opacity': 0.8,
+                         'size': 4},
+              'mode': 'markers',
+              'type': 'scatter3d',
+              'x': array([-10., -10., -10., ...,  10.,  10.,  10.]),
+              'y': array([-10., -10., -10., ...,  10.,  10.,  10.]),
+              'z': array([ 0.        ,  0.40816327,  0.81632653, ..., 19.18367347, 19.59183673,
+                          20.        ])},
+             {'marker': {'color': 'red', 'size': 10},
+              'mode': 'markers',
+              'type': 'scatter3d',
+              'x': [10.0],
+              'y': [-10.0],
+              'z': [20.0]}],
+    'layout': {'margin': {'b': 10, 'l': 10, 'r': 10, 't': 10},
+               'scene': {'xaxis': {'title': {'text': 'X axis'}},
+                         'yaxis': {'title': {'text': 'Y axis'}},
+                         'zaxis': {'title': {'text': 'Z axis'}}},
+               'template': '...',
+               'title': {'text': '3D Multimodular Function Visualization'}}
+})
+"
+"0","fig.show()"
+"0",""

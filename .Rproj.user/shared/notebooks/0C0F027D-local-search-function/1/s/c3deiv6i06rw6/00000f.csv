@@ -1,0 +1,28 @@
+"0","def get_v_star(t):"
+"0","    # Create an initial vector 'u' of zeros with length 't'"
+"0","    u = np.zeros(t)"
+"0","    # Set the first element of vector 'u' to -1"
+"0","    u[0] = -1"
+"0","    # Set the last element of vector 'u' to 1"
+"0","    u[-1] = 1"
+"0","    # Initialize the list 'v_star' with the initial vector 'u'"
+"0","    v_star = [u]"
+"0","    # Loop over the length of 'u' minus one times"
+"0","    for i in range(len(u) - 1):"
+"0","        # Append the last element of 'u' to the front of 'u'"
+"0","        u = np.append(u[-1], u)"
+"0","        # Remove the last element of 'u' to maintain the same length"
+"0","        u = np.delete(u, -1)"
+"0","        # Append the updated vector 'u' to the list 'v_star'"
+"0","        v_star.append(u)"
+"0","    # Convert the list of vectors 'v_star' into a NumPy array and return it"
+"0","    return(np.array(v_star))"
+"0","    "
+"0","# Example of function call:"
+"0","# This will create a 4x4 matrix where each row is a cyclically shifted version of the first row"
+"0","get_v_star(4)"
+"1","array([[-1.,  0.,  0.,  1.],
+       [ 1., -1.,  0.,  0.],
+       [ 0.,  1., -1.,  0.],
+       [ 0.,  0.,  1., -1.]])
+"

@@ -1,0 +1,209 @@
+"0","print(f'Running {nsims} simulations with {N} patients and {T} timeslots.')"
+"1","Running 100000 simulations with 8 patients and 12 timeslots.
+"
+"0","# Get start time and set timer seconds"
+"0","start_time = time.time()"
+"0","seconds = 30"
+"0","bestresult = {"
+"0","          'schedule': None,"
+"0","          'iats': None,"
+"0","          'iats_diff': None,"
+"0","          'loss': None,"
+"0","          'calc_time': None"
+"0","          } # Dictionary for saving best result"
+"0",""
+"0","# Start timer while loop"
+"0","while True:"
+"0","    current_time = time.time()"
+"0","    elapsed_time = current_time - start_time"
+"0","    "
+"0","    if elapsed_time > seconds:"
+"0","        print(f""Finished iterating in: {str(int(elapsed_time))} seconds\n"")"
+"0","        print(f""Best result:\nschedule: {bestresult['schedule']},\niats: {bestresult['iats']},\niats_diff: {bestresult['iats_diff']},\nloss = {bestresult['loss']}, calc time: {bestresult['calc_time']} secs\n"")"
+"0","        break"
+"0","      "
+"0","    "
+"0","    ## data preparation"
+"0","    psm = fn.patient_shift_matrix(sim).astype(int)"
+"0","    print(""Generated new psm\n"")"
+"0","    transf_to_iats = lambda x: fn.transform_schedule_iats(x, d) "
+"0","    iats_sm = np.apply_along_axis(transf_to_iats, 1, psm) # iats shifting matrix"
+"0","    iats_d_sm = np.diff(iats_sm) # first derivative iats shifting matrix"
+"0","    "
+"0","    ## Start iterator for inter arrival times in shift matrix"
+"0","    results = [] # start list for saving results"
+"0","    for iats in iats_sm:"
+"0","      tic = time.time()"
+"0","      simreswt = [None] * nsims # array for saving waiting times"
+"0","      simresln = 0 # array for saving lateness"
+"0","      "
+"0","      for i in range(nsims): # simulate nsims number of times"
+"0","        experiment = fn.simulate_crn(iats, ctsm[i], stsm[i], logs=logs)"
+"0","        simreswt[i] = experiment[0].mean()"
+"0","        ln = max(0, (experiment[1] - d))"
+"0","        simresln += ln"
+"0","        "
+"0","      mwt = np.array(simreswt).mean()"
+"0","      mln = simresln / nsims"
+"0","      loss = 0.5 * mwt + 0.5 * mln"
+"0","      toc = time.time()"
+"0","      result = {"
+"0","          'schedule': fn.transform_iats_schedule(iats, d, T)[0],"
+"0","          'iats': iats,"
+"0","          'iats_diff': np.diff(iats),"
+"0","          'loss': loss,"
+"0","          'calc_time': toc - tic"
+"0","        }"
+"0","      if bestresult['loss'] == None: # save first result as bestresult"
+"0","            bestresult = result"
+"0","      if result['loss'] < bestresult['loss']: # break loop on first improvement of loss value"
+"0","            sim = result['schedule'] # assign current best schedule as new starting point for search"
+"0","            bestresult = result"
+"0","            print(f""\n#### Found better schedule: {result['schedule']} with loss: {result['loss']}\n"")"
+"0","            break"
+"0","      "
+"0","      results.append(result)"
+"0","      print(f""schedule: {result['schedule']},\niats: {result['iats']},\niats_diff: {result['iats_diff']},\nloss = {result['loss']}, calc time: {result['calc_time']} secs\n"")"
+"0","      "
+"0",""
+"1","Generated new psm
+
+schedule: [2 0 1 0 1 0 1 0 1 0 1 1],
+iats: [ 0  0 20 20 20 20 20 10],
+iats_diff: [  0  20   0   0   0   0 -10],
+loss = 3.6815764354891494, calc time: 1.3939299583435059 secs
+
+schedule: [1 0 1 0 1 0 1 0 1 0 1 2],
+iats: [ 0 20 20 20 20 20 10  0],
+iats_diff: [ 20   0   0   0   0 -10 -10],
+loss = 7.250599545889286, calc time: 1.4240219593048096 secs
+
+schedule: [2 1 0 0 1 0 1 0 1 0 1 1],
+iats: [ 0  0 10 30 20 20 20 10],
+iats_diff: [  0  10  20 -10   0   0 -10],
+loss = 4.043114765925841, calc time: 1.4885008335113525 secs
+
+schedule: [2 0 1 1 0 0 1 0 1 0 1 1],
+iats: [ 0  0 20 10 30 20 20 10],
+iats_diff: [  0  20 -10  20 -10   0 -10],
+loss = 3.9132622489679294, calc time: 1.3972530364990234 secs
+
+schedule: [2 0 1 0 1 1 0 0 1 0 1 1],
+iats: [ 0  0 20 20 10 30 20 10],
+iats_diff: [  0  20   0 -10  20 -10 -10],
+loss = 3.8489871186189992, calc time: 1.3664722442626953 secs
+
+schedule: [2 0 1 0 1 0 1 1 0 0 1 1],
+iats: [ 0  0 20 20 20 10 30 10],
+iats_diff: [  0  20   0   0 -10  20 -20],
+loss = 3.7856640559014436, calc time: 1.3525381088256836 secs
+
+
+#### Found better schedule: [2 0 1 0 1 0 1 0 1 1 0 1] with loss: 3.064242890309827
+
+Generated new psm
+
+schedule: [2 0 1 0 1 0 1 0 1 1 0 1],
+iats: [ 0  0 20 20 20 20 10 20],
+iats_diff: [  0  20   0   0   0 -10  10],
+loss = 3.064242890309827, calc time: 1.3384888172149658 secs
+
+schedule: [1 0 1 0 1 0 1 0 1 1 0 2],
+iats: [ 0 20 20 20 20 10 20  0],
+iats_diff: [ 20   0   0   0 -10  10 -20],
+loss = 6.293149606137612, calc time: 1.4432830810546875 secs
+
+schedule: [2 1 0 0 1 0 1 0 1 1 0 1],
+iats: [ 0  0 10 30 20 20 10 20],
+iats_diff: [  0  10  20 -10   0 -10  10],
+loss = 3.425450968328085, calc time: 1.3950490951538086 secs
+
+schedule: [2 0 1 1 0 0 1 0 1 1 0 1],
+iats: [ 0  0 20 10 30 20 10 20],
+iats_diff: [  0  20 -10  20 -10 -10  10],
+loss = 3.2932816828502824, calc time: 1.3992691040039062 secs
+
+schedule: [2 0 1 0 1 1 0 0 1 1 0 1],
+iats: [ 0  0 20 20 10 30 10 20],
+iats_diff: [  0  20   0 -10  20 -20  10],
+loss = 3.2174763744451047, calc time: 1.4711532592773438 secs
+
+
+#### Found better schedule: [2 0 1 0 1 0 1 1 0 1 0 1] with loss: 2.9269008983211577
+
+Generated new psm
+
+schedule: [2 0 1 0 1 0 1 1 0 1 0 1],
+iats: [ 0  0 20 20 20 10 20 20],
+iats_diff: [  0  20   0   0 -10  10   0],
+loss = 2.9269008983211577, calc time: 1.4283559322357178 secs
+
+schedule: [1 0 1 0 1 0 1 1 0 1 0 2],
+iats: [ 0 20 20 20 10 20 20  0],
+iats_diff: [ 20   0   0 -10  10   0 -20],
+loss = 6.060301445406179, calc time: 1.4728178977966309 secs
+
+schedule: [2 1 0 0 1 0 1 1 0 1 0 1],
+iats: [ 0  0 10 30 20 10 20 20],
+iats_diff: [  0  10  20 -10 -10  10   0],
+loss = 3.28715376199173, calc time: 1.4853529930114746 secs
+
+schedule: [2 0 1 1 0 0 1 1 0 1 0 1],
+iats: [ 0  0 20 10 30 10 20 20],
+iats_diff: [  0  20 -10  20 -20  10   0],
+loss = 3.1476766113229093, calc time: 1.4198682308197021 secs
+
+
+#### Found better schedule: [2 0 1 0 1 1 0 1 0 1 0 1] with loss: 2.920901786291491
+
+Generated new psm
+
+schedule: [2 0 1 0 1 1 0 1 0 1 0 1],
+iats: [ 0  0 20 20 10 20 20 20],
+iats_diff: [  0  20   0 -10  10   0   0],
+loss = 2.920901786291491, calc time: 1.4714388847351074 secs
+
+schedule: [1 0 1 0 1 1 0 1 0 1 0 2],
+iats: [ 0 20 20 10 20 20 20  0],
+iats_diff: [ 20   0 -10  10   0   0 -20],
+loss = 5.994092358359775, calc time: 1.4613227844238281 secs
+
+schedule: [2 1 0 0 1 1 0 1 0 1 0 1],
+iats: [ 0  0 10 30 10 20 20 20],
+iats_diff: [  0  10  20 -20  10   0   0],
+loss = 3.276438264028254, calc time: 1.4120192527770996 secs
+
+schedule: [2 0 1 1 0 1 0 1 0 1 0 1],
+iats: [ 0  0 20 10 20 20 20 20],
+iats_diff: [  0  20 -10  10   0   0   0],
+loss = 3.0173776281022384, calc time: 1.4083309173583984 secs
+
+schedule: [2 0 1 0 2 0 0 1 0 1 0 1],
+iats: [ 0  0 20 20  0 30 20 20],
+iats_diff: [  0  20   0 -20  30 -10   0],
+loss = 3.3337627972138, calc time: 1.388653039932251 secs
+
+schedule: [2 0 1 0 1 1 1 0 0 1 0 1],
+iats: [ 0  0 20 20 10 10 30 20],
+iats_diff: [  0  20   0 -10   0  20 -10],
+loss = 3.1500723319978357, calc time: 1.3205089569091797 secs
+
+schedule: [2 0 1 0 1 1 0 1 1 0 0 1],
+iats: [ 0  0 20 20 10 20 10 30],
+iats_diff: [  0  20   0 -10  10 -10  20],
+loss = 3.032159796303008, calc time: 1.353445053100586 secs
+
+schedule: [2 0 1 0 1 1 0 1 0 1 1 0],
+iats: [ 0  0 20 20 10 20 20 10],
+iats_diff: [  0  20   0 -10  10   0 -10],
+loss = 4.060059499112356, calc time: 1.358760118484497 secs
+
+Finished iterating in: 36 seconds
+
+Best result:
+schedule: [2 0 1 0 1 1 0 1 0 1 0 1],
+iats: [ 0  0 20 20 10 20 20 20],
+iats_diff: [  0  20   0 -10  10   0   0],
+loss = 2.920901786291491, calc time: 1.405587911605835 secs
+
+"

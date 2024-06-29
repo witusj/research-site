@@ -1,0 +1,7 @@
+"0","### TEST ###"
+"0",""
+"0","s = [1, 2]"
+"0","test = calculate_rolling_convolution(s)"
+"0","print(test)"
+"1","None
+"

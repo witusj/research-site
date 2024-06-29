@@ -1,0 +1,12 @@
+"0","# animals list"
+"0","animals = ['cat', 'dog', 'rabbit']"
+"0",""
+"0","# list of wild animals"
+"0","wild_animals = ['tiger', 'fox']"
+"0",""
+"0","# appending wild_animals list to animals"
+"0","animals.append(wild_animals)"
+"0",""
+"0","print('Updated animals list: ', animals)"
+"1","Updated animals list:  ['cat', 'dog', 'rabbit', ['tiger', 'fox']]
+"

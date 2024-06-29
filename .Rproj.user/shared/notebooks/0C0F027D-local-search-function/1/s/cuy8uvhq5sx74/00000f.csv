@@ -1,0 +1,43 @@
+"0","def generate_search_neighborhood(schedule):"
+"0","  N = sum(schedule)"
+"0","  T = len(schedule)"
+"0","  print(f'The schedule = {schedule}')"
+"0","  "
+"0","  # Generate a matrix 'v_star' using the 'get_v_star' function"
+"0","  v_star = get_v_star(T)"
+"0","  "
+"0","  # Generate all possible non-empty subsets (powerset) of the set {0, 1, 2, ..., T-1}"
+"0","  # 'ids' will be a list of tuples, where each tuple is a subset of indices"
+"0","  ids = list(powerset(range(T)))"
+"0","  "
+"0","  # Select the vectors from 'v_star' that correspond to the indices in each subset"
+"0","  # 'sub_sets' will be a list of lists, where each inner list contains vectors from 'v_star'"
+"0","  sub_sets = [v_star[i] for i in ids]"
+"0","  "
+"0","  # Sum the vectors within each subset and flatten the result to get a 1-D array"
+"0","  # 'summed_sets' will be a list of 1-D numpy arrays, where each array is the sum of vectors"
+"0","  summed_sets = [np.sum(sub_sets[i], axis=0).flatten() for i in range(len(sub_sets))]"
+"0","  "
+"0","  neighborhood = np.array([schedule + summed_sets[i] for i in range(len(summed_sets))])"
+"0","  "
+"0","  # Create a mask for rows with negative values"
+"0","  mask = ~np.any(neighborhood < 0, axis=1)"
+"0","  "
+"0","  # Filter out rows with negative values using the mask"
+"0","  filtered_neighborhood = neighborhood[mask]"
+"0","  print(f'And the neighborhood is {filtered_neighborhood}')"
+"0","  return filtered_neighborhood"
+"0","  "
+"0","testnh = generate_search_neighborhood(x)"
+"1","The schedule = [2, 0, 0, 0, 2]
+And the neighborhood is [[2. 0. 0. 0. 2.]
+ [1. 0. 0. 0. 3.]
+ [2. 0. 0. 1. 1.]
+ [1. 0. 0. 1. 2.]
+ [2. 0. 1. 0. 1.]
+ [1. 0. 1. 0. 2.]
+ [2. 1. 0. 0. 1.]
+ [1. 1. 0. 0. 2.]
+ [3. 0. 0. 0. 1.]
+ [2. 0. 0. 0. 2.]]
+"

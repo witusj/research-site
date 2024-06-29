@@ -1,0 +1,14 @@
+"0","""""""Simple test case"""""""
+"1","'Simple test case'
+"
+"0","x = np.array([2, 0, 3, 1, 1], dtype=np.int64)"
+"0","d = 3"
+"0","s=np.array("
+"0","    [0.1, 0.2, 0.3, 0.2, 0.15, 0.05, 0, 0, 0, 0, 0, 0, 0, 0], dtype=np.float64)"
+"0","u = 4"
+"0",""
+"0","sch = run_schedule(x, d, s, u, False)"
+"1","Expected wt per state: [2.25       0.         7.4399125  3.97027875 3.30829234]
+"
+"0","sch.visualize_system('p_min')"
+"0",""

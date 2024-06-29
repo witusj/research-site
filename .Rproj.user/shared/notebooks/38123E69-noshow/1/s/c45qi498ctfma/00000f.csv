@@ -1,0 +1,8 @@
+"0","### TEST ###"
+"0",""
+"0","s = np.array([0.0, 0.5, 0.2, 0.3])"
+"0","q = 0.1"
+"0","s_adj = service_time_with_no_shows(s, q)"
+"0","print(f'adjusted service times={s_adj}, with sum  {s_adj.sum()}')"
+"1","adjusted service times=[0.1  0.45 0.18 0.27], with sum  1.0
+"

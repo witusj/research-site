@@ -1,0 +1,6 @@
+"0",""
+"0","# plot histogram of waiting times"
+"0","fig = sns.histplot(simres)"
+"0","fig.set(title=f""Mean waiting time = {mwt}"")"
+"1","[Text(0.5, 1.0, 'Mean waiting time = 11.271269652058631')]
+"

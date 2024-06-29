@@ -1,0 +1,28 @@
+"0","# Create and train the model"
+"0","model = xgb.XGBRegressor(objective='reg:squarederror')"
+"0","model.fit(X_train, y_train)"
+"1","XGBRegressor(base_score=None, booster=None, callbacks=None,
+             colsample_bylevel=None, colsample_bynode=None,
+             colsample_bytree=None, device=None, early_stopping_rounds=None,
+             enable_categorical=False, eval_metric=None, feature_types=None,
+             gamma=None, grow_policy=None, importance_type=None,
+             interaction_constraints=None, learning_rate=None, max_bin=None,
+             max_cat_threshold=None, max_cat_to_onehot=None,
+             max_delta_step=None, max_depth=None, max_leaves=None,
+             min_child_weight=None, missing=nan, monotone_constraints=None,
+             multi_strategy=None, n_estimators=None, n_jobs=None,
+             num_parallel_tree=None, random_state=None, ...)
+"
+"0","# Predict on the test set"
+"0","y_pred = model.predict(X_test)"
+"0",""
+"0","# Evaluate the model"
+"0","rmse = mean_squared_error(y_test, y_pred, squared=False)"
+"2","/Users/witoldtenhove/Documents/Projects/vu/research/experiments/site/.virtualenv/lib/python3.9/site-packages/sklearn/metrics/_regression.py:492: FutureWarning:
+
+'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+
+"
+"0","print(f'RMSE: {rmse}')"
+"1","RMSE: 0.20772912278964284
+"

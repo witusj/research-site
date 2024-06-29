@@ -1,0 +1,69 @@
+"0","T = 24 # number of intervals"
+"0","x = np.zeros(T) "
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'np' is not defined
+"
+"0","t = np.arange(T, step=2)"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'np' is not defined
+"
+"0","x[t] = 1"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'x' is not defined
+"
+"0","x[-1] = 1"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'x' is not defined
+"
+"0","x[0] = 2 "
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'x' is not defined
+"
+"0","x = x.astype(int) # initial schedule"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'x' is not defined
+"
+"0","print(f'Initial schedule: {x}')"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'x' is not defined
+"
+"0","N = np.sum(x)"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'np' is not defined
+"
+"0","d = 10"
+"0","l = 20"
+"0","limit = calc_distr_limit(l * N)+1"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'N' is not defined
+"
+"0","service_times = range(0, limit)"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'limit' is not defined
+"
+"0","s = np.array([poisson.pmf(i, l) for i in service_times], dtype=np.float64)"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'np' is not defined
+"
+"0","u = T-1"
+"0","sch = run_schedule(x, d, s, u, False)"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'x' is not defined
+"
+"0","sch.visualize_system('p_plus')"
+"2","Traceback (most recent call last):
+  File ""<string>"", line 1, in <module>
+NameError: name 'sch' is not defined
+"

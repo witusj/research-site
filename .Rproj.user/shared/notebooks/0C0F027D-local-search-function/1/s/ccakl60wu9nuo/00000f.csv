@@ -1,0 +1,7 @@
+"0","def obj_function(x):"
+"0","  res = sum(map(lambda i: i * i, x))"
+"0","  return res"
+"0","  "
+"0","obj_function(np.array(x))"
+"1","8
+"

@@ -1,0 +1,8 @@
+"0","def run_schedule(x, d, s, q, omega, print_system=True):"
+"0","    schedule = Schedule(x=x, d=d, s=s, q=q, omega=omega)"
+"0","    schedule.calculate_system_states(until=len(x))"
+"0","    schedule.calculate_wait_times()"
+"0","    schedule.calculate_loss()"
+"0","    if(print_system): print(schedule)"
+"0","    return(schedule)"
+"0",""

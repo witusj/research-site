@@ -1,0 +1,849 @@
+{
+    "sources": [
+        {
+            "DOI": "10.1007/s10729-007-9015-x",
+            "ISSN": "1386-9620, 1572-9389",
+            "URL": "https://link.springer.com/10.1007/s10729-007-9015-x",
+            "abstract": "In this paper optimal outpatient appointment scheduling is studied. A local search procedure is derived that converges to the optimal schedule with a weighted average of expected waiting times of patients, idle time of the doctor and tardiness (lateness) as objective. No-shows are allowed to happen. For certain combinations of parameters the well-known Bailey-Welch rule is found to be the optimal appointment schedule.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Kaandorp",
+                    "given": "Guido C."
+                },
+                {
+                    "family": "Koole",
+                    "given": "Ger"
+                }
+            ],
+            "container-title": "Health Care Management Science",
+            "id": "kaandorp_optimal_2007",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007,
+                        9
+                    ]
+                ]
+            },
+            "page": "217-229",
+            "title": "Optimal outpatient appointment scheduling",
+            "type": "article-journal",
+            "volume": "10"
+        },
+        {
+            "DOI": "10.1080/19488300.2012.665154",
+            "ISSN": "1948-8300, 1948-8319",
+            "URL": "http://www.tandfonline.com/doi/abs/10.1080/19488300.2012.665154",
+            "abstract": "In this paper we study the problem of deciding at what times to schedule patients when there are emergency arrivals following a non-stationary Poisson process. The service times can be any given distribution. The objective function consists of a weighted sum of the waiting times, idle time and tardiness. We prove that this objective function is multimodular, and then use a local search algorithm which in that case is guaranteed to ﬁnd the optimal solution. Numerical examples show that this method gives considerable improvements over the standard even-spaced schedule, and that the schedules for di↵erent service time distributions can look quite di↵erent.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        8,
+                        27
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Koeleman",
+                    "given": "Paulien M."
+                },
+                {
+                    "family": "Koole",
+                    "given": "Ger M."
+                }
+            ],
+            "container-title": "IIE Transactions on Healthcare Systems Engineering",
+            "id": "koeleman_optimal_2012",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012,
+                        1
+                    ]
+                ]
+            },
+            "page": "14-30",
+            "title": "Optimal outpatient appointment scheduling with emergency arrivals and general service times",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "DOI": "10.1016/j.ejor.2016.06.064",
+            "ISSN": "03772217",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0377221716305239",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        9,
+                        19
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Ahmadi-Javid",
+                    "given": "Amir"
+                },
+                {
+                    "family": "Jalali",
+                    "given": "Zahra"
+                },
+                {
+                    "family": "Klassen",
+                    "given": "Kenneth J"
+                }
+            ],
+            "container-title": "European Journal of Operational Research",
+            "id": "ahmadi-javid_outpatient_2017",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        4
+                    ]
+                ]
+            },
+            "page": "3-34",
+            "title": "Outpatient appointment systems in healthcare: A review of optimization studies",
+            "title-short": "Outpatient appointment systems in healthcare",
+            "type": "article-journal",
+            "volume": "258"
+        },
+        {
+            "DOI": "10.1155/2022/5819813",
+            "ISSN": "2040-2309, 2040-2295",
+            "URL": "https://www.hindawi.com/journals/jhe/2022/5819813/",
+            "abstract": "This paper provides a comprehensive review of Appointment Scheduling (AS) in healthcare service while we propose appointment scheduling problems and various applications and solution approaches in healthcare systems. For this purpose, more than 150 scientific papers are critically reviewed. The literature and the articles are categorized based on several problem specifications, i.e., the flow of patients, patient preferences, and random arrival time and service. Several methods have been proposed to shorten the patient waiting time resulting in the shortest idle times in healthcare centers. Among existing modeling such as simulation models, mathematical optimization techniques, Markov chain, and artificial intelligence are the most practical approaches to optimizing or improving patient satisfaction in healthcare centers. In this study, various criteria are selected for structuring the recent literature dealing with outpatient scheduling problems at the strategic, tactical, or operational levels. Based on the review papers, some new overviews, problem settings, and hybrid modeling approaches are highlighted.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        9,
+                        22
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Ala",
+                    "given": "Ali"
+                },
+                {
+                    "family": "Chen",
+                    "given": "Feng"
+                }
+            ],
+            "container-title": "Journal of Healthcare Engineering",
+            "editor": [
+                {
+                    "family": "Jafarzadeh Ghoushchi",
+                    "given": "Saeid"
+                }
+            ],
+            "id": "ala_appointment_2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        3
+                    ]
+                ]
+            },
+            "page": "1-16",
+            "title": "Appointment Scheduling Problem in Complexity Systems of the Healthcare Services: A Comprehensive Review",
+            "title-short": "Appointment Scheduling Problem in Complexity Systems of the Healthcare Services",
+            "type": "article-journal",
+            "volume": "2022"
+        },
+        {
+            "DOI": "10.1109/WSC.2012.6465186",
+            "abstract": "In this study we consider the optimal scheduling of a certain number of appointments in a given number of time slots. Given a set of appointment slots, we assume that customers can arrive early or late according to a known distribution around the scheduled arrival time. Analytical methods exist for this problem when all customers are assumed to be punctual, but evaluating methods when this assumption is relieved do not yet exist. The reason why this is difficult, is that the order of service is no longer fixed when possible arrival times of two consecutive customers overlap. Therefore we use simulation to evaluate schedules, and optimisation via simulation techniques to optimize schedules. We develop and compare several strategies, among which random local search and nested partitions. Numerical experiments show that significant improvements can be achieved compared to standard scheduling practice.",
+            "author": [
+                {
+                    "family": "Koeleman",
+                    "given": "Paulien"
+                },
+                {
+                    "family": "Koole",
+                    "given": "Ger"
+                }
+            ],
+            "container-title": "Proceedings of the 2012 Winter Simulation Conference (WSC)",
+            "id": "koeleman_appointment_2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012,
+                        12
+                    ]
+                ]
+            },
+            "keyword": "Educational institutions, Medical services, Numerical models, Optimal scheduling, Schedules, Standards",
+            "note": "ISSN: 1558-4305",
+            "page": "1-5",
+            "title": "Appointment scheduling using optimisation via simulation",
+            "type": "paper-conference"
+        },
+        {
+            "DOI": "10.1002/nav.21933",
+            "ISSN": "0894-069X, 1520-6750",
+            "URL": "https://onlinelibrary.wiley.com/doi/10.1002/nav.21933",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        10,
+                        16
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Shehadeh",
+                    "given": "Karmel S."
+                },
+                {
+                    "family": "Cohn",
+                    "given": "Amy E. M."
+                },
+                {
+                    "family": "Jiang",
+                    "given": "Ruiwei"
+                }
+            ],
+            "container-title": "Naval Research Logistics (NRL)",
+            "id": "shehadeh_using_2021",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        2
+                    ]
+                ]
+            },
+            "page": "89-111",
+            "title": "Using stochastic programming to solve an outpatient appointment scheduling problem with random service and arrival times",
+            "type": "article-journal",
+            "volume": "68"
+        },
+        {
+            "DOI": "10.1016/j.ejor.2018.03.001",
+            "ISSN": "0377-2217",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0377221718302108",
+            "abstract": "This paper presents a review of the literature on multi-appointment scheduling problems in hospitals. In these problems, patients need to sequentially visit multiple resource types in a hospital setting so they can receive treatment or be diagnosed. Therefore, each patient is assigned a specific path over a subset of the considered resources and each step needs to be scheduled. The main aim of these problems is to let each patient visit the resources in his or her subset within the allotted time to receive timely care. This is important because a delayed diagnosis or treatment may result in adverse health effects. Additionally, with multi-appointment scheduling, hospitals have the opportunity to augment patient satisfaction, allowing the patient to visit the hospital less frequently. To structure the growing body of literature in this field and aid researchers in the field, a classification scheme is proposed and used to classify the scientific work on multi-appointment scheduling in hospitals published before the end of 2017. The results show that multi-appointment scheduling problems are becoming increasingly popular. In fact, multi-appointment scheduling problems in hospitals are currently gaining progressively more momentum in the academic literature.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        10,
+                        30
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Marynissen",
+                    "given": "Joren"
+                },
+                {
+                    "family": "Demeulemeester",
+                    "given": "Erik"
+                }
+            ],
+            "container-title": "European Journal of Operational Research",
+            "id": "marynissen_literature_2019",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        1
+                    ]
+                ]
+            },
+            "keyword": "OR in health services, Appointment series, Combination appointments, Integrated healthcare, Multi-appointment scheduling",
+            "page": "407-419",
+            "title": "Literature review on multi-appointment scheduling problems in hospitals",
+            "type": "article-journal",
+            "volume": "272"
+        },
+        {
+            "DOI": "10.1287/opre.2014.1286",
+            "ISSN": "0030-364X, 1526-5463",
+            "URL": "http://pubsonline.informs.org/doi/10.1287/opre.2014.1286",
+            "abstract": "Motivated by the rising popularity of electronic appointment booking systems, we develop appointment scheduling models that take into account the patient preferences regarding when they would like to be seen. The service provider dynamically decides which appointment days to make available for the patients. Patients arriving with appointment requests may choose one of the days offered to them or leave without an appointment. Patients with scheduled appointments may cancel or not show up for the service. The service provider collects a “revenue” from each patient who shows up and incurs a “service cost” that depends on the number of scheduled appointments. The objective is to maximize the expected net “profit” per day. We begin by developing a static model that does not consider the current state of the scheduled appointments. We give a characterization of the optimal policy under the static model and bound its optimality gap. Building on the static model, we develop a dynamic model that considers the current state of the scheduled appointments, and we propose a heuristic solution procedure. In our computational experiments, we test the performance of our models under the patient preferences estimated through a discrete choice experiment that we conduct in a large community health center. Our computational experiments reveal that the policies we propose perform well under a variety of conditions.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        1
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Feldman",
+                    "given": "Jacob"
+                },
+                {
+                    "family": "Liu",
+                    "given": "Nan"
+                },
+                {
+                    "family": "Topaloglu",
+                    "given": "Huseyin"
+                },
+                {
+                    "family": "Ziya",
+                    "given": "Serhan"
+                }
+            ],
+            "container-title": "Operations Research",
+            "id": "feldman_appointment_2014",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        8
+                    ]
+                ]
+            },
+            "page": "794-811",
+            "title": "Appointment Scheduling Under Patient Preference and No-Show Behavior",
+            "type": "article-journal",
+            "volume": "62"
+        },
+        {
+            "DOI": "10.1016/j.ejor.2016.06.004",
+            "ISSN": "0377-2217",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0377221716304246",
+            "abstract": "We study the design of a healthcare appointment system with a single physician and a group of patients whose service durations are stochastic. The challenge is to find the optimal arrival sequence for a group of mixed patients such that the expected total cost of patient waiting time and physician overtime is minimized. While numerous simulation studies report that sequencing patients by increasing order of variance of service duration (Smallest-Variance-First or SVF rule) performs extremely well in many environments, analytical results on optimal sequencing are known only for two patients. In this paper, we shed light on why it is so difficult to prove the optimality of the SVF rule in general. We first assume that the appointment intervals are fixed according to a given template and analytically investigate the optimality of the SVF rule. In particular, we show that the optimality of the SVF rule depends on two important factors: the number of patients in the system and the shape of service time distributions. The SVF rule is more likely to be optimal if the service time distributions are more positively skewed, but this advantage gradually disappears as the number of patients increases. These results partly explain why the optimality of the SVF rule can only be proved for a small number of patients, and why in practice, the SVF rule is usually observed to be superior, since most empirical distributions of the service durations are positively skewed, like log-normal distributions. The insights obtained from our analytical model apply to more general settings, including the cases where the service durations follow log-normal distributions and the appointment intervals are optimized.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        9
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Kong",
+                    "given": "Qingxia"
+                },
+                {
+                    "family": "Lee",
+                    "given": "Chung-Yee"
+                },
+                {
+                    "family": "Teo",
+                    "given": "Chung-Piaw"
+                },
+                {
+                    "family": "Zheng",
+                    "given": "Zhichao"
+                }
+            ],
+            "container-title": "European Journal of Operational Research",
+            "id": "kong_appointment_2016",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        12
+                    ]
+                ]
+            },
+            "keyword": "OR in health services, Appointment Sequencing, Smallest-Variance-First Rule, Stochastic Ordering",
+            "page": "809-821",
+            "title": "Appointment sequencing: Why the Smallest-Variance-First rule may not be optimal",
+            "title-short": "Appointment sequencing",
+            "type": "article-journal",
+            "volume": "255"
+        },
+        {
+            "DOI": "10.1016/j.ejor.2006.10.003",
+            "ISSN": "0377-2217",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0377221706010368",
+            "abstract": "Advanced access scheduling, introduced in the early 1990s, is reported to significantly improve the performance of outpatient clinics. The successful implementation of advanced access scheduling requires the match of daily healthcare provider capacity with patient demand. In this paper, for the first time a closed-form approach is presented to determine the optimal percentage of open-access appointments to match daily provider capacity to demand. This paper introduces the conditions for the optimal percentage of open-access appointments and the procedure to find the optimal percentage. Furthermore, the sensitivity of the optimal percentage of open-access appointments to provider capacity, no-show rates, and demand distribution is investigated. Our results demonstrate that the optimal percentage of open-access appointments mainly depends on the ratio of the average demand for open-access appointments to provider capacity and the ratio of the show-up rates for prescheduled and open-access appointments.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        9
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Qu",
+                    "given": "Xiuli"
+                },
+                {
+                    "family": "Rardin",
+                    "given": "Ronald L."
+                },
+                {
+                    "family": "Williams",
+                    "given": "Julie Ann S."
+                },
+                {
+                    "family": "Willis",
+                    "given": "Deanna R."
+                }
+            ],
+            "container-title": "European Journal of Operational Research",
+            "id": "qu_matching_2007",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007,
+                        12
+                    ]
+                ]
+            },
+            "keyword": "Appointment scheduling, Advanced access, No-show rate, OR in health service",
+            "page": "812-826",
+            "title": "Matching daily healthcare provider capacity to demand in advanced access scheduling systems",
+            "type": "article-journal",
+            "volume": "183"
+        },
+        {
+            "DOI": "10.1080/00207543.2015.1081426",
+            "ISSN": "0020-7543, 1366-588X",
+            "URL": "http://www.tandfonline.com/doi/full/10.1080/00207543.2015.1081426",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        9
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Yan",
+                    "given": "Chongjun"
+                },
+                {
+                    "family": "Tang",
+                    "given": "Jiafu"
+                },
+                {
+                    "family": "Jiang",
+                    "given": "Bowen"
+                },
+                {
+                    "family": "Fung",
+                    "given": "Richard Y. K."
+                }
+            ],
+            "container-title": "International Journal of Production Research",
+            "id": "yan_sequential_2015",
+            "issue": "24",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        12
+                    ]
+                ]
+            },
+            "page": "7376-7395",
+            "title": "Sequential appointment scheduling considering patient choice and service fairness",
+            "type": "article-journal",
+            "volume": "53"
+        },
+        {
+            "DOI": "10.1111/deci.12517",
+            "ISSN": "1540-5915",
+            "URL": "https://onlinelibrary.wiley.com/doi/abs/10.1111/deci.12517",
+            "abstract": "Appointment scheduling is generally applied in outpatient clinics and other healthcare services. The challenge in scheduling is to find a strategy for dealing with variability and unpredictability in service duration and patient arrivals. The consequences of an ineffective strategy include long waiting times for patients and idle time for the healthcare provider. In turn, these have implications for the perceived quality, cost-efficiency, and capacity of healthcare services. The generation of optimal schedules is a notoriously intractable problem, and earlier attempts at designing effective strategies for appointment scheduling were based on approximation, simulation, or simplification. We propose a novel strategy for scheduling that exploits three tactical ideas to make the problem manageable. We compare the proposed strategy to other approaches, and show that it matches or outperforms competing methods in terms of flexibility, ease of use, and speed. More importantly, it outperforms competing approaches nearly uniformly in approaching the desired balance between waiting and idle times as specified in a chosen objective function. Therefore, the strategy is a good basis for further enrichments.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        9
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Kuiper",
+                    "given": "Alex"
+                },
+                {
+                    "family": "Mandjes",
+                    "given": "Michel"
+                },
+                {
+                    "dropping-particle": "de",
+                    "family": "Mast",
+                    "given": "Jeroen"
+                },
+                {
+                    "family": "Brokkelkamp",
+                    "given": "Ruben"
+                }
+            ],
+            "container-title": "Decision Sciences",
+            "id": "kuiper_flexible_nodate",
+            "issue": "n/a",
+            "keyword": "appointment scheduling, convexity, Healthcare optimization, phase-type distributions, queueing",
+            "note": "_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/deci.12517",
+            "title": "A flexible and optimal approach for appointment scheduling in healthcare",
+            "type": "article-journal",
+            "volume": "n/a"
+        },
+        {
+            "DOI": "10.7726/jhtm.2015.1001",
+            "ISSN": "21631328",
+            "URL": "http://paper.uscip.us/jhtm/JHTM.2015.1001.pdf",
+            "abstract": "Outpatient appointment scheduling for a clinic is a problem of assigning appointment times to patients that seek non-emergency medical attention. This paper employs genetic algorithms to find optimal or near optimal numbers of advanced appointment and walk-in patients to assign to each time block for a day. To this end, an outpatient appointment schedule is represented by a vector in which a component indicates the number of patients to be assigned to the corresponding time block. The goal is to maximize profit for the clinic subject to such factors as the number of time blocks for a day, no-show rates, mean service times, unit revenues, patient wait time unit cost, staff idle time unit costs, and staff overtime unit costs. Our results reveal that all factors are influential in maximizing the profit except the staff overtime unit costs.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        9
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Chew",
+                    "given": "Song"
+                },
+                {
+                    "family": "Groves",
+                    "given": "Clariecia"
+                }
+            ],
+            "container-title": "Journal of Healthcare Technology and Management",
+            "id": "chew_genetic_2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "title": "Genetic Algorithm–Based Outpatient Appointment Scheduling Systems",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.1287/mnsc.2018.3242",
+            "ISSN": "0025-1909",
+            "URL": "https://pubsonline.informs.org/doi/10.1287/mnsc.2018.3242",
+            "abstract": "We address the problem of designing appointment scheduling strategies in a stochastic environment accounting for patient no-shows, nonpunctuality, general stochastic service times, and unscheduled emergency walk-ins. A good appointment schedule seeks to help outpatient clinics to utilize their resources efficiently while containing patients’ waiting times. The task of identifying an optimal schedule is modeled as a nonlinear integer program, where the objective function is the outcome of stochastic analysis in transient state. We maintain the discrete nature of the appointment scheduling problem by considering arrival epochs with discrete supports. By looking at discrete-time snapshots of the random evolution of a single-server queueing model, we characterize probabilistically the system’s workload over time as a function of an appointment schedule, and we derive recursive expressions for the performance measures of interest. Subsequently, we unfold discrete convexity properties of the optimization problem. We prove that under general conditions the objective function is supermodular and componentwise convex. Under assumptions on patient punctuality, we prove that the optimal scheduling strategy minimizes a multimodular function, a property which guarantees that a locally optimal schedule is also globally optimal. The size of the local neighborhood, however, grows exponentially with the dimension of the problem. To the best of our knowledge, this study is the first to develop and implement an algorithm for minimizing locally a multimodular function over nonnegative integer vectors via submodular set-function minimization over ring families, a task that can be performed in polynomial time.This paper was accepted by David Simchi-Levi, operations management.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        9
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Zacharias",
+                    "given": "Christos"
+                },
+                {
+                    "family": "Yunes",
+                    "given": "Tallys"
+                }
+            ],
+            "container-title": "Management Science",
+            "id": "zacharias_multimodularity_2020",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        2
+                    ]
+                ]
+            },
+            "keyword": "appointment scheduling, multimodularity, discrete optimization, transient queues",
+            "note": "Publisher: INFORMS",
+            "page": "744-763",
+            "title": "Multimodularity in the Stochastic Appointment Scheduling Problem with Discrete Arrival Epochs",
+            "type": "article-journal",
+            "volume": "66"
+        },
+        {
+            "DOI": "10.1287/mnsc.2018.3239",
+            "ISSN": "0025-1909",
+            "URL": "https://pubsonline.informs.org/doi/10.1287/mnsc.2018.3239",
+            "abstract": "Despite the prevalence and significance of walk-ins in healthcare, we know relatively little about how to plan and manage the daily operations of a healthcare facility that accepts both scheduled and walk-in patients. In this paper, we take a data-analytics approach and develop an optimization model to determine the optimal appointment schedule in the presence of potential walk-ins. Our model is the first known approach that can jointly handle general walk-in processes and heterogeneous, time-dependent no-show behaviors. We demonstrate that, with walk-ins, the optimal schedules are fundamentally different from those without. Our numerical study reveals that walk-ins introduce a new source of uncertainties to the system and cannot be viewed as a simple solution to compensate for patient no-shows. Scheduling, however, is an effective way to counter some of the negative impact from uncertain patient behaviors. Using data from practice, we predict a significant cost reduction (42%–73% on average) if the providers were to switch from current practice (which tends to overlook walk-ins in planning) to our proposed schedules. Although our work is motivated by healthcare, our models and insights can also be applied to general appointment-based services with walk-ins.This paper was accepted by Gad Allon, operations management.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        9
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Wang",
+                    "given": "Shan"
+                },
+                {
+                    "family": "Liu",
+                    "given": "Nan"
+                },
+                {
+                    "family": "Wan",
+                    "given": "Guohua"
+                }
+            ],
+            "container-title": "Management Science",
+            "id": "wang_managing_2020",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        2
+                    ]
+                ]
+            },
+            "keyword": "appointment scheduling, walk-ins, analytics, healthcare, service operations management",
+            "note": "Publisher: INFORMS",
+            "page": "667-686",
+            "title": "Managing Appointment-Based Services in the Presence of Walk-in Customers",
+            "type": "article-journal",
+            "volume": "66"
+        },
+        {
+            "ISBN": "978-989-758-285-1",
+            "URL": "https://www.scitepress.org/Link.aspx?doi=10.5220/0006624802390246",
+            "abstract": "Digital Library",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        9
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Deceuninck",
+                    "given": "Matthias"
+                },
+                {
+                    "family": "Vuyst",
+                    "given": "Stijn De"
+                },
+                {
+                    "family": "Fiems",
+                    "given": "Dieter"
+                }
+            ],
+            "id": "deceuninck_reducing_2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        11
+                    ]
+                ]
+            },
+            "page": "239-246",
+            "title": "Reducing Disruptive Effects of Service Interruptions in Appointment Scheduling",
+            "type": "paper-conference"
+        },
+        {
+            "DOI": "10.5220/0006624802390246",
+            "ISBN": "978-989-758-285-1",
+            "URL": "http://www.scitepress.org/DigitalLibrary/Link.aspx?doi=10.5220/0006624802390246",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        9
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Deceuninck",
+                    "given": "Matthias"
+                },
+                {
+                    "family": "De Vuyst",
+                    "given": "Stijn"
+                },
+                {
+                    "family": "Fiems",
+                    "given": "Dieter"
+                }
+            ],
+            "container-title": "Proceedings of the 7th International Conference on Operations Research and Enterprise Systems",
+            "id": "deceuninck_reducing_2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "page": "239-246",
+            "publisher": "SCITEPRESS - Science; Technology Publications",
+            "publisher-place": "Funchal, Madeira, Portugal",
+            "title": "Reducing Disruptive Effects of Service Interruptions in Appointment Scheduling:",
+            "title-short": "Reducing Disruptive Effects of Service Interruptions in Appointment Scheduling",
+            "type": "paper-conference"
+        },
+        {
+            "DOI": "10.1007/s10100-021-00762-5",
+            "ISSN": "1613-9178",
+            "URL": "https://doi.org/10.1007/s10100-021-00762-5",
+            "abstract": "When scheduling the starting times for treatment appointments of patients in hospitals or outpatient clinics such as radiotherapy centers, minimizing patient waiting time and simultaneously maximizing resource usage is crucial. Significant uncertainty in the treatment durations makes scheduling those activities particularly challenging. In addition to the treatments themselves, also preparation times and exiting times have to be considered, which are uncertain as well. To address and analyze this type of problems, the current study develops a model for planning appointment times under uncertain activity durations for a medical unit with a single “core resource” (in our application case a radiotherapy beam device), several treatment rooms, and required preparation and exiting phases for each patient. We employ a novel buffer concept based on quantiles of duration distributions and introduce a reactive procedure that adapts a pre-determined baseline schedule to the actual patient flow. For heuristically solving the resulting stochastic optimization model, a combination of a Genetic Algorithm and Monte Carlo simulation is proposed. A case study uses real-world data on activity durations gathered from an ion beam therapy facility in Austria. Experimental results comparing different variants of the method are carried out. In particular, comparisons of the stochastic optimization approach to a simpler deterministic approach are given.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Braune",
+                    "given": "Roland"
+                },
+                {
+                    "family": "Gutjahr",
+                    "given": "Walter J."
+                },
+                {
+                    "family": "Vogl",
+                    "given": "Petra"
+                }
+            ],
+            "container-title": "Central European Journal of Operations Research",
+            "id": "braune_stochastic_2022",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        12
+                    ]
+                ]
+            },
+            "keyword": "Appointment scheduling, Genetic algorithm, Monte Carlo simulation, Radiotherapy, Stochastic project scheduling",
+            "page": "1239-1277",
+            "title": "Stochastic radiotherapy appointment scheduling",
+            "type": "article-journal",
+            "volume": "30"
+        },
+        {
+            "DOI": "10.1016/j.cie.2014.03.026",
+            "ISSN": "03608352",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0360835214001119",
+            "abstract": "With the pressing demand for improving patient accessibility, the traditional scheduling system may not be effective for mitigating the adverse effects caused by no-shows, appointment cancellations and late arrivals. For this reason, open access scheduling, which speciﬁes that a portion of clinic appointment slots be reserved for short-notice appointments, was proposed and adopted in recent years. In literature, many studies have developed a variety of approaches and models to optimize the open access scheduling systems, while few considers the inclusion of walk-in patients and the optimal allocation of reserved slots on the scheduling template under the open access conﬁguration. In this paper, we propose a Discrete Event Simulation and Genetic Algorithm (DES–GA) approach to ﬁnd the heuristic optimal scheduling template under the clinic setting that allows both open access and walk-in patients. The solution can provide scheduling templates consisting of not only the optimal number of reservations for open access appointments and walk-ins, but also the optimized allocation of these reserved slots, by minimizing the average cost per admission of open access or walk-in patient. In this approach, the cost is measured by the weighted summation of patient waiting time, provider idle time, and provider overtime. A case study and sensitivity analysis are conducted to show how the heuristic optimal scheduling template generated from the proposed approach could vary under different scenarios. This also illustrates the viability of our model. The results show that the heuristic optimal scheduling templates are signiﬁcantly affected by the patient attendance rate, level of demands of same-day appointment and walk-in admissions, as well as the cost coefﬁcients associated with patient waiting time, provider idle time and provider overtime.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        11,
+                        25
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Peng",
+                    "given": "Yidong"
+                },
+                {
+                    "family": "Qu",
+                    "given": "Xiuli"
+                },
+                {
+                    "family": "Shi",
+                    "given": "Jing"
+                }
+            ],
+            "container-title": "Computers & Industrial Engineering",
+            "id": "peng_hybrid_2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        6
+                    ]
+                ]
+            },
+            "page": "282-296",
+            "title": "A hybrid simulation and genetic algorithm approach to determine the optimal scheduling templates for open access clinics admitting walk-in patients",
+            "type": "article-journal",
+            "volume": "72"
+        },
+        {
+            "URL": "https://researchrabbitapp.com/home",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        12,
+                        21
+                    ]
+                ]
+            },
+            "id": "noauthor_research_nodate",
+            "title": "Research Rabbit",
+            "type": ""
+        },
+        {
+            "URL": "http://localhost:5001/projects/outpatient-appointment-scheduling/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2022,
+                        12,
+                        21
+                    ]
+                ]
+            },
+            "id": "noauthor_asreview_nodate",
+            "title": "ASReview LAB - A tool for AI-assisted systematic reviews",
+            "type": ""
+        }
+    ],
+    "project_biblios": []
+}

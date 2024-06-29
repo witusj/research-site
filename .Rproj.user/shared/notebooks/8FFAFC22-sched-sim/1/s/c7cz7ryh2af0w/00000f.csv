@@ -1,0 +1,7 @@
+"0","# run simulations"
+"0","for s in range(nsims):"
+"0","  # experiment = simulate(iats, cts, sts, pct, ns, logs=logs)"
+"0","  experiment = simulate_crn(iats, ctsm[s], stsm[s], logs=logs)"
+"0","  simres.append(experiment.mean())"
+"0",""
+"0","mwt = np.array(simres).mean()"

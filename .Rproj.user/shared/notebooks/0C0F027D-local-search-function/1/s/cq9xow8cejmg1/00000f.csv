@@ -1,0 +1,6 @@
+"0","N = sum(x)"
+"0","T = len(x)"
+"0","result = comb(N + T - 1, N, exact=True)  # exact=True returns the exact integer"
+"0","print(result) "
+"1","70
+"

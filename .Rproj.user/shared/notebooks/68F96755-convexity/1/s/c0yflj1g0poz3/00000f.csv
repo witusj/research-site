@@ -1,0 +1,12 @@
+"0","from sympy import *"
+"0",""
+"0","def g(x):"
+"0","  return 4*x - 3"
+"0","  "
+"0","x = symbols('x')"
+"0","f = f(x)"
+"0","g = g(x)"
+"0",""
+"0","plot(f, g, (x, -1, 4))"
+"1","<sympy.plotting.plot.Plot object at 0x14f155b20>
+"

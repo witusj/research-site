@@ -1,0 +1,91 @@
+"0","# Scatter plot of actual vs predicted values using Plotly Graph Objects"
+"0","fig = go.Figure()"
+"0",""
+"0","fig.add_trace(go.Scatter(x=y_test, y=y_pred, mode='markers', name='Predictions', "
+"0","                         marker=dict(color='blue')))"
+"1","Figure({
+    'data': [{'marker': {'color': 'blue'},
+              'mode': 'markers',
+              'name': 'Predictions',
+              'type': 'scatter',
+              'x': array([3.55204328, 3.56905875, 3.730667  , 3.59515554, 4.54882925, 3.53481728]),
+              'y': array([3.81973  , 3.71254  , 3.8976119, 3.727148 , 4.44767  , 3.8681931],
+                         dtype=float32)}],
+    'layout': {'template': '...'}
+})
+"
+"0","fig.add_trace(go.Scatter(x=[min(y_test), max(y_test)], y=[min(y_test), max(y_test)], "
+"0","                         mode='lines', name='Ideal', line=dict(color='red')))"
+"1","Figure({
+    'data': [{'marker': {'color': 'blue'},
+              'mode': 'markers',
+              'name': 'Predictions',
+              'type': 'scatter',
+              'x': array([3.55204328, 3.56905875, 3.730667  , 3.59515554, 4.54882925, 3.53481728]),
+              'y': array([3.81973  , 3.71254  , 3.8976119, 3.727148 , 4.44767  , 3.8681931],
+                         dtype=float32)},
+             {'line': {'color': 'red'},
+              'mode': 'lines',
+              'name': 'Ideal',
+              'type': 'scatter',
+              'x': [3.5348172750000004, 4.548829250000001],
+              'y': [3.5348172750000004, 4.548829250000001]}],
+    'layout': {'template': '...'}
+})
+"
+"0","fig.update_layout(title='Actual vs Predicted Loss',"
+"0","                  xaxis_title='Actual Loss',"
+"0","                  yaxis_title='Predicted Loss',"
+"0","                  legend_title='Legend')"
+"1","Figure({
+    'data': [{'marker': {'color': 'blue'},
+              'mode': 'markers',
+              'name': 'Predictions',
+              'type': 'scatter',
+              'x': array([3.55204328, 3.56905875, 3.730667  , 3.59515554, 4.54882925, 3.53481728]),
+              'y': array([3.81973  , 3.71254  , 3.8976119, 3.727148 , 4.44767  , 3.8681931],
+                         dtype=float32)},
+             {'line': {'color': 'red'},
+              'mode': 'lines',
+              'name': 'Ideal',
+              'type': 'scatter',
+              'x': [3.5348172750000004, 4.548829250000001],
+              'y': [3.5348172750000004, 4.548829250000001]}],
+    'layout': {'legend': {'title': {'text': 'Legend'}},
+               'template': '...',
+               'title': {'text': 'Actual vs Predicted Loss'},
+               'xaxis': {'title': {'text': 'Actual Loss'}},
+               'yaxis': {'title': {'text': 'Predicted Loss'}}}
+})
+"
+"0","fig.show()"
+"0",""
+"0","# Feature importance using Plotly Graph Objects"
+"0","importance = model.get_booster().get_score(importance_type='weight')"
+"0","importance_df = pd.DataFrame({"
+"0","    'feature': importance.keys(),"
+"0","    'importance': importance.values()"
+"0","}).sort_values(by='importance', ascending=False)"
+"0",""
+"0","fig = go.Figure(go.Bar("
+"0","    x=importance_df['feature'], "
+"0","    y=importance_df['importance'],"
+"0","    marker=dict(color='blue')"
+"0","))"
+"0",""
+"0","fig.update_layout(title='Feature Importance',"
+"0","                  xaxis_title='Feature',"
+"0","                  yaxis_title='Importance')"
+"1","Figure({
+    'data': [{'marker': {'color': 'blue'},
+              'type': 'bar',
+              'x': array(['x0', 'x1', 'x2'], dtype=object),
+              'y': array([224., 177., 103.])}],
+    'layout': {'template': '...',
+               'title': {'text': 'Feature Importance'},
+               'xaxis': {'title': {'text': 'Feature'}},
+               'yaxis': {'title': {'text': 'Importance'}}}
+})
+"
+"0","fig.show()"
+"0",""
